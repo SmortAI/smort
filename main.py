@@ -1,6 +1,6 @@
 # create SmortAI class later
-from Speech import speech_recog
-from Speech import speech_tts
+from speech import speech_recog
+from speech import speech_tts
 
 
 class SmortAI:
