@@ -2,5 +2,4 @@
 SpeechRecognition
 PyAudio
 pocketsphinx
-
 pyttsx3~=2.90
