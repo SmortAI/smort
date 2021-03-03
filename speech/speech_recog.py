@@ -14,7 +14,7 @@ class SmortRecognizer:
             audio = self.recognizer.listen(source)
 
             try:
-                text = self.recognizer.recognize_sphinx(audio)
+                text = self.recognizer.recognize_google(audio)
                 return text
 
             except Exception as e:

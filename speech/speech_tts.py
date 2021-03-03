@@ -26,3 +26,4 @@ class SmortTTS:
     def say_tts(self, msg):
         self.engine.say(msg)
         self.engine.runAndWait()
+
