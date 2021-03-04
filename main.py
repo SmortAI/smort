@@ -17,35 +17,41 @@ class SmortAI:
         self.tts.set_speed_rate(self.tts_rate)
 
     def main_loop(self):
-        print("Input (speech recognition enabled: {}, text-to-specch enabled: {}): ".format(str(self.is_recog), str(self.is_tts)))
+        print("Please wait. Adjusting to background noise.")
 
-        self.tts.say_tts("My name is Smort AI. I am really smort.")
+        self.recog.adjust_for_bg_noise(duration=5)
 
-        try:
+        while True:
+            print("Listening..")
             if (self.is_recog):
                 inp = smort.recog.recognize()
             else:
-                inp = input("")
+                inp = input("").lower()
 
-            processed_inp = self.cmd_handler.process_input(inp)
+            print(inp)
 
-            print(processed_inp)
-            self.cmd_handler.call_cmd(processed_inp)
-
-            if (self.is_tts):
-                self.tts.say_tts(self.cmd_handler.outp)
+            if (inp != None):
+                inp = inp.lower()
             else:
-                print("Output: " + self.cmd_handler.outp)
+                continue
 
-        except Exception as e:
-            if (self.is_tts):
-                self.tts.say_tts("Something went wrong")
-            else:
-                print("Something went wrong")
+            if (self.recog.wake_word in inp):  # check for wake word
 
-            print(e)
+                if (self.is_tts):
+                    self.tts.say_tts("I am ready")  # remember to play ready sound (like alexa)
+                else:
+                    print("I am ready")
 
+                cmd = self.recog.recognize()
+                processed_inp = self.cmd_handler.process_input(cmd)
 
+                print(processed_inp)
+                self.cmd_handler.call_cmd(processed_inp)
+
+                if (self.is_tts):
+                    self.tts.say_tts(self.cmd_handler.outp)
+                else:
+                    print("Output: " + self.cmd_handler.outp)
 
 
 if (int(input("Want TTS in your Bot? 1 = yes, 0 = no: ")) == 1):
