@@ -41,8 +41,12 @@ class SmortAI:
                     self.tts.say_tts("I am ready")  # remember to play ready sound (like alexa)
                 else:
                     print("I am ready")
-
-                cmd = self.recog.recognize()
+                
+                try:
+                    cmd = self.recog.recognize()
+                except Exception as e:
+                    print(e)
+                print(cmd)
                 processed_inp = self.cmd_handler.process_input(cmd)
 
                 print(processed_inp)

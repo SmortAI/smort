@@ -1,5 +1,6 @@
 
 SpeechRecognition
 PyAudio
-pocketsphinx
 pyttsx3~=2.90
+forex_python
+webbrowser
