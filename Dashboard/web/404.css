@@ -5,10 +5,11 @@
 }
 
 body{
-    background-image: url("./imgs/pedro-lastra-Nyvq2juw4_o-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-position: center;
+    background: url("./imgs/Sylt\ Drone\ Image.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .main-container{
@@ -20,10 +21,10 @@ body{
     height: 35vh;
     padding: 2vh;
 
-    background: rgba(255, 255, 255, 0.247);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 5.5px );
-    -webkit-backdrop-filter: blur( 5.5px );
+    background: rgba(238, 238, 238, 0.336);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
     border-radius: 2vh;
     border: 1px solid rgba(255, 255, 255, 0.267);
 
