@@ -21,41 +21,6 @@ class SmortAI:
 
         self.recog.adjust_for_bg_noise(duration=5)
 
-        while True:
-            print("Listening..")
-            if (self.is_recog):
-                inp = smort.recog.recognize()
-            else:
-                inp = input("").lower()
-
-            print(inp)
-
-            if (inp != None):
-                inp = inp.lower()
-            else:
-                continue
-
-            if (self.recog.wake_word in inp):  # check for wake word
-
-                if (self.is_tts):
-                    self.tts.say_tts("I am ready")  # remember to play ready sound (like alexa)
-                else:
-                    print("I am ready")
-                
-                try:
-                    cmd = self.recog.recognize()
-                except Exception as e:
-                    print(e)
-                print(cmd)
-                processed_inp = self.cmd_handler.process_input(cmd)
-
-                print(processed_inp)
-                self.cmd_handler.call_cmd(processed_inp)
-
-                if (self.is_tts):
-                    self.tts.say_tts(self.cmd_handler.outp)
-                else:
-                    print("Output: " + self.cmd_handler.outp)
 
 
 if (int(input("Want TTS in your Bot? 1 = yes, 0 = no: ")) == 1):

@@ -2,13 +2,11 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 root = "./web/"
 
-# this splits everything don't delete or move itay thx
 
 
 def split(word):
     return [char for char in word]
 
-# this gets the web vars dont delete or move itay thx
 
 
 def getVar(var, path):
@@ -51,26 +49,28 @@ class Serv(BaseHTTPRequestHandler):
             self.path = "/index.html"
         try:
             try:
-                code = open(root + self.path[1:]).read()
-            except:
-                code = open(root + self.path[1:] + ".html").read()
+                code = open(root + self.path[1:], "rb").read()
+            except Exception as e:
+                print(e)
+                code = open(root + self.path[1:] + ".html", "rb").read()
             self.send_response(200)
         except:
             if("?" in self.path):
                 try:
-                    code = open(root + RemoveVars(self.path)[1:]).read()
-                except:
-                    code = open(root + RemoveVars(self.path)[1:] + ".html").read()
+                    code = open(root + RemoveVars(self.path)[1:], "rb").read()
+                except Exception as e:
+                    print(str(e))
+                    code = open(root + RemoveVars(self.path)[1:] + ".html", "rb").read()
                 self.send_response(200)
 
                 print(getVar("vodka", self.path))
 
             else:
-                code = open(root + "404.html").read()
+                code = open(root + "404.html", "rb").read()
                 self.send_response(404)
 
         self.end_headers()
-        self.wfile.write(bytes(code, 'utf-8'))
+        self.wfile.write(code)
 
 
 httpd = HTTPServer(('localhost', 9028), Serv)
