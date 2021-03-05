@@ -13,32 +13,64 @@ body {
 }
 
 .menu {
+
+  position: absolute;
+  top: 50%;
+  left: 20vh;
+  transform: translate(-50%, -50%);
+  height: 80% !important;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 5vh 5vh 5vh 5vh;
+  grid-template-rows: 5vh 5vh 5vh 5vh 5vh;
+  grid-row-gap: 5vh;
   position: absolute;
   width: 25vh;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  
 }
 
 .menu div {
-  width: 100%;
-  height: 4.5vh;
-  border-bottom: solid 1px #ffffff;
+  border: solid 1px #ffffff;
+  transition: 1s ease;
+  padding: 10px;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-bottom-right-radius: 1vh;
+  
+
+
 }
 
-.menu div a {
+.menu div:hover, .menu div.selected{
+  background-color:rgba(255, 255, 255, 0.267);
+  transition: 1s ease;
+}
+
+.menu :nth-child(4) div, .menu :nth-child(5) div, .menu :nth-child(6) div{
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 1vh;
+  margin-top: 5vh;
+}
+
+.menu a, .menu a div h1 {
+
   color: white;
   text-decoration: none;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  cursor: default;
   font-size: 2vh;
-  font-family: Roboto Regular;
+}
+
+
+.menu a svg{
+  width: 27vh;
+  height: 2.7vh;
+  margin-left: 23.5vh;
+  margin-top: -0.21vh;
+}
+
+.menu :nth-child(4) svg, .menu :nth-child(5) svg, .menu :nth-child(6) svg{
+  position:relative;
+  
 }
