@@ -5,11 +5,14 @@ SmortAI is a fully open-source smart assistant that is mainly written in Python
 
 
 
-## 1. Install python(https://www.python.org/downloads/)
+1. Install python(https://www.python.org/downloads/)
 
 
 
-## 2. Install the Required packages
+2. Install the _required_ packages
+
+
+
 
 
 
