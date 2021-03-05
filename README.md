@@ -37,5 +37,10 @@ pip3 install -r requirements.txt
 
 Other 
 ```
-I dont remember how to use trashy operating systems like mac and windows
+pip install pipwin
+pipwin install pyaudio
+pip install -r requirements.txt
 ```
+
+
+Created by `ccm7676` and `itay-cyber`
