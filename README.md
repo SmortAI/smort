@@ -1,5 +1,5 @@
-# smortAi
-Smort Ai is a fully opensource smart assistant that is mainly written in python
+# SmortAI
+SmortAI is a fully open-source smart assistant that is mainly written in Python
 
 ## Install
 
@@ -46,4 +46,19 @@ Mac
 ```
 idk
 ```
+
+
+# Info
+
+SmortAI works with and without a microphone. You pick this option on bot run. For best experience, use headphones and in a quiet place so you have a clear voice.
+
+Wake Word: hey smart guy
+
+
+Current Commands:
+
+`search [search term]`: Searches `[search term]` in the default web browser. 
+`exit`: Exits SmortAI
+
+
 Created by `ccm7676` and `itay-cyber`
