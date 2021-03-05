@@ -35,12 +35,15 @@ pip install --user pyaudio
 pip3 install -r requirements.txt
 ```
 
-Other 
+Windows
 ```
 pip install pipwin
 pipwin install pyaudio
 pip install -r requirements.txt
 ```
 
-
+Mac
+```
+idk
+```
 Created by `ccm7676` and `itay-cyber`
