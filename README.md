@@ -64,4 +64,12 @@ Current Commands:
 `exit`: Exits SmortAI
 
 
+## How to run
+
+For now, run the command in your downloaded directory: 
+`python main.py`
+
+WEB SERVER DASHBOARD COMING SOON!
+
+
 Created by `ccm7676` and `itay-cyber`
