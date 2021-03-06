@@ -17,9 +17,16 @@ class SmortAI:
         self.tts.set_speed_rate(self.tts_rate)
 
     def main_loop(self):
-        print("Please wait. Adjusting to background noise.")
+        if (self.is_recog):
+            print("Please wait. Adjusting to background noise.")
 
-        self.recog.adjust_for_bg_noise(duration=5)
+            self.recog.adjust_for_bg_noise(duration=5)
+
+
+        
+
+
+
 
 
 
