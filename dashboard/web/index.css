@@ -15,10 +15,10 @@ body {
 .menu {
 
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 20vh;
   transform: translate(-50%, -50%);
-  height: 80% !important;
+  height: 100vh !important;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 5vh 5vh 5vh 5vh 5vh;
@@ -32,7 +32,7 @@ body {
 .menu div {
   border: solid 1px #ffffff;
   transition: 1s ease;
-  padding: 10px;
+  padding: 1vh;
   background: rgba( 255, 255, 255, 0.15 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
@@ -70,7 +70,39 @@ body {
   margin-top: -0.21vh;
 }
 
-.menu :nth-child(4) svg, .menu :nth-child(5) svg, .menu :nth-child(6) svg{
-  position:relative;
+.menu :nth-child(4) svg {
+  position:absolute;
+  top:32.8vh;
+  left: 0vh
   
+}
+
+.menu :nth-child(5) svg {
+  position: absolute;
+  top: 42.8vh;
+  left: 0vh;
+
+}
+
+.menu :nth-child(6) svg {
+  position: absolute;
+  top: 52.8vh;
+  left: 0vh;
+}
+
+.ui-container {
+  position: absolute;
+  top: 45%;
+  left: 58vh;
+  transform: translateY(-50%);
+  width: 90vh;
+  height: 50vh;
+  max-width: 60%;
+  background: rgba( 255, 255, 255, 0.20 );
+  backdrop-filter: blur( 3.0px );
+  -webkit-backdrop-filter: blur( 3.0px );
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255);
+
+
 }
